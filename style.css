@@ -1,5 +1,63 @@
+html,
 body {
-  background-image: url("https://i.pinimg.com/originals/c4/80/51/c48051920e7d210d192a43ee80edd4ea.gif");
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  /* background-image: url("https://i.pinimg.com/originals/c4/80/51/c48051920e7d210d192a43ee80edd4ea.gif");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  margin: 0;
+}
+
+canvas {
+  touch-action: none;
+}
+
+#cat {
+  position: fixed;
+  top: -20px;
+}
+
+.pressed {
+  border-color: transparent transparent transparent yellow !important;
+}
+
+.navigator-arrow-container {
+  position: fixed;
+  left: 57px;
+  bottom: 30px;
+}
+
+.navigator-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent red;
+  border-width: 20px 0px 20px 20px;
+}
+
+.navigator-left-right-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  position: relative;
+  right: 30px;
+}
+
+.up {
+  transform: rotate(-90deg);
+}
+
+.right {
+  transform: rotate(0deg);
+}
+
+.bottom {
+  transform: rotate(90deg);
+}
+
+.left {
+  transform: rotate(180deg);
 }
