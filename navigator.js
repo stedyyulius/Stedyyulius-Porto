@@ -36,20 +36,19 @@ document.onkeydown = (e) => {
 
     pressButton(e.key);
 
-    if (e.key === "ArrowUp") {
+    if (e.key === directions.UP) {
         fatCat.position.x += movePixel;
         fatCat.position.z -= (movePixel * 2 / 5);
         catBody.rotation.z -= (movePixel * 5 / 5);
-        // fatCat.rotation.x -= (movePixel * 2 / 5);
-    } else if (e.key === "ArrowDown") {
+    } else if (e.key === directions.DOWN) {
         fatCat.position.x -= movePixel;
         fatCat.position.z += (movePixel * 2 / 5);
         catBody.rotation.z += (movePixel * 5 / 5);
-    } else if (e.key === "ArrowLeft") {
+    } else if (e.key === directions.LEFT) {
         fatCat.position.z -= movePixel;
         fatCat.position.x -= (movePixel * 2 / 5);
         catBody.rotation.y -= (movePixel * 5 / 5);
-    } else if (e.key === "ArrowRight") {
+    } else if (e.key === directions.RIGHT) {
         fatCat.position.z += movePixel;
         fatCat.position.x += (movePixel * 2 / 5);
         catBody.rotation.y += (movePixel * 5 / 5);
