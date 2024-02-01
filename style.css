@@ -46,18 +46,18 @@ canvas {
   right: 30px;
 }
 
-.up {
+.ArrowUp {
   transform: rotate(-90deg);
 }
 
-.right {
+.ArrowRight {
   transform: rotate(0deg);
 }
 
-.bottom {
+.ArrowDown {
   transform: rotate(90deg);
 }
 
-.left {
+.ArrowLeft {
   transform: rotate(180deg);
 }
