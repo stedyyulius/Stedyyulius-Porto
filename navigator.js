@@ -30,6 +30,7 @@ const directions = {
 }
 
 const fatCat = map.findObjectByName('Cat');
+const catBody = map.findObjectByName('CatBody');
 
 document.onkeydown = (e) => {
 
@@ -38,15 +39,20 @@ document.onkeydown = (e) => {
     if (e.key === "ArrowUp") {
         fatCat.position.x += movePixel;
         fatCat.position.z -= (movePixel * 2 / 5);
+        catBody.rotation.z -= (movePixel * 5 / 5);
+        // fatCat.rotation.x -= (movePixel * 2 / 5);
     } else if (e.key === "ArrowDown") {
         fatCat.position.x -= movePixel;
         fatCat.position.z += (movePixel * 2 / 5);
+        catBody.rotation.z += (movePixel * 5 / 5);
     } else if (e.key === "ArrowLeft") {
         fatCat.position.z -= movePixel;
         fatCat.position.x -= (movePixel * 2 / 5);
+        catBody.rotation.y -= (movePixel * 5 / 5);
     } else if (e.key === "ArrowRight") {
         fatCat.position.z += movePixel;
         fatCat.position.x += (movePixel * 2 / 5);
+        catBody.rotation.y += (movePixel * 5 / 5);
     }
 
 };
