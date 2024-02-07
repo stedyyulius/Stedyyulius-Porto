@@ -5,15 +5,19 @@
 </head>
 <body>
   <div id="app">
+    <div class="instruction">
+      <b>Please use the arrow key to move the black cat</b>
+    </div>
     <div class="navigator-arrow-container">
-      <div class="navigator-arrow ArrowUp"></div>
+      <div id="ArrowUp" class="navigator-arrow ArrowUp"></div>
       <div class="navigator-left-right-container">
-        <div class="navigator-arrow ArrowLeft"></div>
-        <div class="navigator-arrow ArrowRight"></div>
+        <div id="ArrowLeft" class="navigator-arrow ArrowLeft"></div>
+        <div id="ArrowRight" class="navigator-arrow ArrowRight"></div>
       </div>
-      <div class="navigator-arrow ArrowDown"></div>
+      <div id="ArrowDown" class="navigator-arrow ArrowDown"></div>
     </div>
     <canvas id="map"></canvas>
   </div>
+  <script type="module" src="./instruction.js"></script>
   <script type="module" src="./navigator.js"></script>
 </body>
