@@ -32,6 +32,19 @@ canvas {
   text-align: center;
 }
 
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+
 .pressed {
   border-color: transparent transparent transparent yellow !important;
 }
