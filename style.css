@@ -51,8 +51,8 @@ canvas {
 
 .navigator-arrow-container {
   position: fixed;
-  left: 57px;
-  bottom: 80px;
+  left: 127px;
+  bottom: 30px;
 }
 
 .navigator-arrow {
@@ -60,15 +60,15 @@ canvas {
   height: 0;
   border-style: solid;
   border-color: transparent transparent transparent red;
-  border-width: 20px 0px 20px 20px;
+  border-width: 50px 0px 50px 50px;
 }
 
 .navigator-left-right-container {
   display: flex;
   justify-content: space-between;
-  width: 80px;
+  width: 210px;
   position: relative;
-  right: 30px;
+  right: 82px;
 }
 
 .ArrowUp {

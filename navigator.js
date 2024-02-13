@@ -26,54 +26,54 @@ let catXCoordinate = 434;
 const moveUp = () => {
     fatCat.position.x += movePixel;
     fatCat.position.z -= (movePixel * 2 / 5);
-    fatCat.rotation.z -= (movePixel * 5 / 5);
+    // fatCat.rotation.z -= (movePixel * 5 / 5);
     catYCoordinate -= (movePixel * 1 / 5);
 }
 
 const moveDown = () => {
     fatCat.position.x -= movePixel;
     fatCat.position.z += (movePixel * 2 / 5);
-    fatCat.rotation.z += (movePixel * 5 / 5);
+    // fatCat.rotation.z += (movePixel * 5 / 5);
     catYCoordinate += (movePixel * 1 / 5);
 }
 
 const moveLeft = () => {
     fatCat.position.z -= movePixel;
     fatCat.position.x -= (movePixel * 2 / 5);
-    fatCat.rotation.y -= (movePixel * 5 / 5);
+    // fatCat.rotation.y -= (movePixel * 5 / 5);
     catXCoordinate -= (movePixel * 1 / 5);
 }
 
 const moveRight = () => {
     fatCat.position.z += movePixel;
     fatCat.position.x += (movePixel * 2 / 5);
-    fatCat.rotation.y += (movePixel * 5 / 5);
+    // fatCat.rotation.y += (movePixel * 5 / 5);
     catXCoordinate += (movePixel * 1 / 5);
 }
 
-map.addEventListener("click", (e) => {
+// map.addEventListener("click", (e) => {
 
-    const rect = mapCanvas.getBoundingClientRect();
-    const clickedX = e.clientX - rect.left;
-    const clickedY = e.clientY - rect.top;
+//     const rect = mapCanvas.getBoundingClientRect();
+//     const clickedX = e.clientX - rect.left;
+//     const clickedY = e.clientY - rect.top;
 
 
-    if (catYCoordinate >= clickedY) {
-        moveUp();
-    }
+//     if (catYCoordinate >= clickedY) {
+//         moveUp();
+//     }
 
-    if (catYCoordinate <= clickedY) {
-        moveDown();
-    }
+//     if (catYCoordinate <= clickedY) {
+//         moveDown();
+//     }
 
-    if (catXCoordinate >= clickedX) {
-        moveLeft();
-    }
+//     if (catXCoordinate >= clickedX) {
+//         moveLeft();
+//     }
 
-    if (catXCoordinate <= clickedX) {
-        moveRight();
-    }
-})
+//     if (catXCoordinate <= clickedX) {
+//         moveRight();
+//     }
+// })
 
 const ArrowUp = document.getElementById("ArrowUp");
 
