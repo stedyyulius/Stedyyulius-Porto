@@ -52,6 +52,9 @@ canvas {
   .mobile {
     display: block;
   }
+  .instruction {
+    font-size: 20px;
+  }
 }
 
 .location_pin {
@@ -99,15 +102,15 @@ canvas {
   height: 0;
   border-style: solid;
   border-color: transparent transparent transparent red;
-  border-width: 50px 0px 50px 50px;
+  border-width: 40px 0px 40px 40px;
 }
 
 .navigator-left-right-container {
   display: flex;
   justify-content: space-between;
-  width: 210px;
+  width: 175px;
   position: relative;
-  right: 82px;
+  right: 68px;
 }
 
 .ArrowUp {
