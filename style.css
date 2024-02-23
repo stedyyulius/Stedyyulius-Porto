@@ -55,6 +55,26 @@ canvas {
   .instruction {
     font-size: 20px;
   }
+
+  .location_pin {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* .singapore {
+    left: 283px;
+    top: 350px;
+  }
+
+  .jakarta {
+    left: 841px;
+    top: 400px;
+  }
+
+  .dubai {
+    left: 310px;
+    top: 130px;
+  } */
 }
 
 .location_pin {
@@ -66,24 +86,24 @@ canvas {
 .singapore {
   position: fixed;
   z-index: 9999px;
-  left: 51.7%;
-  top: 47%;
+  left: 785px;
+  top: 362px;
   display: none;
 }
 
 .jakarta {
   position: fixed;
   z-index: 9999px;
-  left: 55.5%;
-  top: 53%;
+  left: 844px;
+  top: 420px;
   display: none;
 }
 
 .dubai {
   position: fixed;
   z-index: 9999px;
-  left: 19.3%;
-  top: 17%;
+  left: 295px;
+  top: 138px;
   display: none;
 }
 

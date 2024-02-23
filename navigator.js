@@ -147,11 +147,3 @@ const pressButton = (direction) => {
     }
 
 };
-
-document.onwheel = (event) => {
-    event.preventDefault();
-};
-
-document.onmousewheel = (event) => {
-    event.preventDefault();
-};
