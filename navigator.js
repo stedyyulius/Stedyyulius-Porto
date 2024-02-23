@@ -26,54 +26,26 @@ let catXCoordinate = 434;
 const moveUp = () => {
     fatCat.position.x += movePixel;
     fatCat.position.z -= (movePixel * 2 / 5);
-    // fatCat.rotation.z -= (movePixel * 5 / 5);
     catYCoordinate -= (movePixel * 1 / 5);
 }
 
 const moveDown = () => {
     fatCat.position.x -= movePixel;
     fatCat.position.z += (movePixel * 2 / 5);
-    // fatCat.rotation.z += (movePixel * 5 / 5);
     catYCoordinate += (movePixel * 1 / 5);
 }
 
 const moveLeft = () => {
     fatCat.position.z -= movePixel;
     fatCat.position.x -= (movePixel * 2 / 5);
-    // fatCat.rotation.y -= (movePixel * 5 / 5);
     catXCoordinate -= (movePixel * 1 / 5);
 }
 
 const moveRight = () => {
     fatCat.position.z += movePixel;
     fatCat.position.x += (movePixel * 2 / 5);
-    // fatCat.rotation.y += (movePixel * 5 / 5);
     catXCoordinate += (movePixel * 1 / 5);
 }
-
-// map.addEventListener("click", (e) => {
-
-//     const rect = mapCanvas.getBoundingClientRect();
-//     const clickedX = e.clientX - rect.left;
-//     const clickedY = e.clientY - rect.top;
-
-
-//     if (catYCoordinate >= clickedY) {
-//         moveUp();
-//     }
-
-//     if (catYCoordinate <= clickedY) {
-//         moveDown();
-//     }
-
-//     if (catXCoordinate >= clickedX) {
-//         moveLeft();
-//     }
-
-//     if (catXCoordinate <= clickedX) {
-//         moveRight();
-//     }
-// })
 
 const ArrowUp = document.getElementById("ArrowUp");
 
@@ -104,10 +76,54 @@ ArrowRight.addEventListener("click", (e) => {
     moveRight();
 });
 
+const PIN_COORDINATE = {
+    "Singapore": {
+        x: 2377.54,
+        z: 7060.55
+    },
+    "Jakarta": {
+        x: 2160.54,
+        z: 7260.55
+    },
+    "Dubai": {
+        x: 3277.54,
+        z: 5250.55
+    }
+}
+
+const isAroundLocationPin = (location) => {
+
+    const x = PIN_COORDINATE[location].x;
+    const z = PIN_COORDINATE[location].z;
+
+    const aroundRadius = 1 / 40;
+
+    return fatCat.position.x >= (x - (x * aroundRadius))
+        && fatCat.position.x <= (x + (x * aroundRadius))
+        && fatCat.position.z >= (z - (z * aroundRadius))
+        && fatCat.position.z <= (z + (z * aroundRadius))
+}
+
+const checkLocationPin = () => {
+
+    const areas = ["Singapore", "Jakarta", "Dubai"];
+
+    for (let i = 0; i < areas.length; i++) {
+        const pin = document.getElementById(areas[i]);
+
+        if (isAroundLocationPin(areas[i])) {
+            pin.style.display = "block";
+        } else {
+            pin.style.display = "none";
+        }
+    }
+}
 
 document.onkeydown = (e) => {
 
     pressButton(e.key);
+
+    checkLocationPin();
 
     if (e.key === directions.UP) {
         moveUp();
